@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust Chronicles - A Personal Travel Blog</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font family and custom styles -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfcfc;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .category-bg-1 { background-image: url('https://placehold.co/400x300/14b8a6/fff?text=AFRICA'); background-size: cover; background-position: center; }
+        .category-bg-2 { background-image: url('https://placehold.co/400x300/0f766e/fff?text=EUROPE'); background-size: cover; background-position: center; }
+        .category-bg-3 { background-image: url('https://placehold.co/400x300/2dd4bf/fff?text=ASIA'); background-size: cover; background-position: center; }
+        .category-bg-4 { background-image: url('https://placehold.co/400x300/06b6d4/fff?text=AMERICAS'); background-size: cover; background-position: center; }
+        .featured-story-bg { background-image: url('https://placehold.co/1200x500/22d3ee/fff?text=Featured+Story+Photo'); background-size: cover; background-position: center; }
+        
+        /* Matching the accent color to a deep teal/cyan palette */
+        .text-accent { color: #0f766e; } /* Teal-700 */
+        .bg-accent { background-color: #0d9488; } /* Teal-600 */
+        .hover\:bg-accent-dark:hover { background-color: #0f766e; } /* Teal-700 */
+        .border-accent { border-color: #14b8a6; } /* Teal-500 */
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Site Title -->
+                <a href="#" class="text-3xl font-serif text-gray-800 tracking-tight font-bold">Wanderlust Chronicles</a>
+                <!-- Navigation Links -->
+                <nav class="space-x-4 flex items-center">
+                    <a href="#discover" class="text-gray-600 hover:text-accent transition duration-150 font-medium hidden sm:inline-block">Stories</a>
+                    <a href="#about" class="text-gray-600 hover:text-accent transition duration-150 font-medium hidden sm:inline-block">About</a>
+                    <a href="#newsletter" class="px-4 py-2 text-sm font-semibold text-white bg-accent rounded-lg shadow-md hover:bg-accent-dark transition duration-300">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section: Welcome and Introduction (Mimics Traveler template top section) -->
+    <main class="pt-16 pb-24 sm:pt-24 sm:pb-32 bg-gray-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-6xl sm:text-7xl font-serif text-gray-900 leading-tight mb-4">
+                Hey, I'm Sarah!
+            </h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                Follow my travels around the world. I share honest stories, minimalist packing guides, and tips for finding the magic in unexpected places.
+            </p>
+            <!-- Call to action area -->
+            <div class="mt-12 flex justify-center space-x-4">
+                <a href="#featured-story" class="px-8 py-3 text-lg font-semibold text-white bg-gray-800 rounded-xl shadow-lg hover:bg-accent transition duration-300">
+                    View Blog
+                </a>
+                <a href="#about-me" class="px-8 py-3 text-lg font-semibold text-gray-800 bg-white border border-gray-300 rounded-xl shadow-lg hover:bg-gray-100 transition duration-300">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Discover My Stories / Category Tiles (Matches Webflow Template's tile layout) -->
+    <section class="py-20 sm:py-24" id="discover">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-serif font-bold text-gray-900 mb-12 text-center">Discover My Stories</h2>
+
+            <!-- Category Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Tile 1: Africa -->
+                <a href="#" class="rounded-xl overflow-hidden shadow-xl transform hover:scale-[1.03] transition duration-500 group">
+                    <div class="category-bg-1 h-48 flex flex-col justify-end p-4">
+                        <h3 class="text-3xl font-serif font-bold text-white mb-2">Africa</h3>
+                        <span class="text-sm font-medium text-white opacity-90 group-hover:opacity-100 transition duration-300">View Posts &rarr;</span>
+                    </div>
+                </a>
+                <!-- Tile 2: Europe -->
+                <a href="#" class="rounded-xl overflow-hidden shadow-xl transform hover:scale-[1.03] transition duration-500 group">
+                    <div class="category-bg-2 h-48 flex flex-col justify-end p-4">
+                        <h3 class="text-3xl font-serif font-bold text-white mb-2">Europe</h3>
+                        <span class="text-sm font-medium text-white opacity-90 group-hover:opacity-100 transition duration-300">View Posts &rarr;</span>
+                    </div>
+                </a>
+                <!-- Tile 3: Asia -->
+                <a href="#" class="rounded-xl overflow-hidden shadow-xl transform hover:scale-[1.03] transition duration-500 group">
+                    <div class="category-bg-3 h-48 flex flex-col justify-end p-4">
+                        <h3 class="text-3xl font-serif font-bold text-white mb-2">Asia</h3>
+                        <span class="text-sm font-medium text-white opacity-90 group-hover:opacity-100 transition duration-300">View Posts &rarr;</span>
+                    </div>
+                </a>
+                <!-- Tile 4: Americas -->
+                <a href="#" class="rounded-xl overflow-hidden shadow-xl transform hover:scale-[1.03] transition duration-500 group">
+                    <div class="category-bg-4 h-48 flex flex-col justify-end p-4">
+                        <h3 class="text-3xl font-serif font-bold text-white mb-2">Americas</h3>
+                        <span class="text-sm font-medium text-white opacity-90 group-hover:opacity-100 transition duration-300">View Posts &rarr;</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="text-xl text-accent font-semibold hover:text-accent-dark transition duration-300">
+                    Want to discover my complete blog? Visit Blog &rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Story Teaser -->
+    <section class="bg-gray-50 py-20 sm:py-24 border-t border-gray-100" id="featured-story">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-sm font-semibold uppercase tracking-wider text-accent text-center mb-12">Featured Story</h2>
+
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col lg:flex-row">
+                <!-- Image Area -->
+                <div class="lg:w-1/2 h-80 lg:h-auto featured-story-bg">
+                    <!-- Image will go here -->
+                </div>
+                <!-- Text Content -->
+                <div class="lg:w-1/2 p-8 sm:p-12 flex flex-col justify-center">
+                    <h3 class="text-3xl font-serif font-bold text-gray-900 mb-4">
+                        The Unplanned Detour: Discovering the True Heart of Kyoto
+                    </h3>
+                    <p class="text-gray-600 text-lg mb-6">
+                        I went for the temples, but found the real story in a quiet, rain-slicked tea house. This is a story of slowing down, surrendering the checklist, and finding connection over sencha.
+                    </p>
+                    <p class="text-gray-500 text-sm mb-8">
+                        Fusce varius fermentum tortor, a vestibulum ipsum varius at. Proin id tortor in nulla sollicitudin rhoncus aliquet ac quam.
+                    </p>
+                    <a href="#post-content-link" class="inline-block px-6 py-3 text-lg font-semibold text-white bg-accent rounded-xl shadow-lg hover:bg-accent-dark transition duration-300 w-fit">
+                        Read Story &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="py-20 sm:py-24" id="about-me">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="h-20 w-20 mx-auto rounded-full bg-gray-200 mb-6 flex items-center justify-center">
+                <!-- Placeholder for profile image -->
+                <span class="text-2xl text-gray-600">👤</span>
+            </div>
+            <h2 class="text-4xl font-serif font-bold text-gray-900 mb-4">Sarah Fischer</h2>
+            <p class="text-gray-600 text-lg max-w-3xl mx-auto mb-6">
+                Why am I sharing my travel stories? It’s simple: travel is more than landmarks. It's about personal growth, cultural exchange, and finding out what you're capable of when everything goes wrong. I write to inspire others to book the ticket and embrace the chaos.
+            </p>
+            <a href="#" class="text-xl text-accent font-semibold hover:text-accent-dark transition duration-300">
+                Read My Stories &rarr;
+            </a>
+        </div>
+    </section>
+
+    <!-- Newsletter Sign-up Section -->
+    <section class="bg-gray-800 py-16" id="newsletter">
+        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-gray-900 p-8 rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-serif font-bold text-white mb-4">Read My Stories in Your Inbox!</h2>
+            <p class="text-gray-300 mb-6">
+                Sign up for exclusive travel tips and first access to new articles every month.
+            </p>
+            <form class="flex flex-col sm:flex-row gap-3">
+                <input type="email" placeholder="Enter your email address" required class="flex-grow px-4 py-3 border border-gray-600 rounded-lg focus:ring-accent focus:border-accent bg-gray-700 text-white placeholder-gray-400">
+                <button type="submit" class="px-6 py-3 font-semibold text-white bg-accent rounded-lg hover:bg-accent-dark transition duration-300 shadow-md">
+                    Subscribe
+                </button>
+            </form>
+            <p class="text-xs text-gray-400 mt-3">We respect your privacy.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-10 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Info Links -->
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">Info</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-600 hover:text-accent">Blog</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-accent">About Me</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-accent">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Categories -->
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">Categories</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-600 hover:text-accent">Europe</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-accent">Asia</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-accent">Africa</a></li>
+                    </ul>
+                </div>
+                <!-- Social -->
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">Social</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-600 hover:text-accent">Instagram</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-accent">Pinterest</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-accent">Twitter</a></li>
+                    </ul>
+                </div>
+                <!-- Copyright -->
+                <div class="col-span-2 md:col-span-1">
+                    <p class="text-sm font-bold text-gray-800 mb-2">Template Traveler</p>
+                    <p class="text-xs text-gray-500">&copy; 2025 Sarah Fischer. Template design inspired by Studio Corvus.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
